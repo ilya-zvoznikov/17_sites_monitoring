@@ -20,15 +20,15 @@ The path to the file with URLs is specified when running after the script name
 ```bash
 $ python check_sites_health.py urls.txt
 http://google.com
-Server responds with HTTP 200: True
+Server responds with HTTP OK: True
 Domain was paid by more than 1 month: True
 
 http://ya.ru
-Server responds with HTTP 200: True
+Server responds with HTTP OK: True
 Domain was paid by more than 1 month: True
 
 http://devman.org
-Server responds with HTTP 200: True
+Server responds with HTTP OK: True
 Domain was paid by more than 1 month: True
 ```
 
