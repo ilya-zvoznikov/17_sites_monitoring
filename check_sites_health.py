@@ -32,7 +32,7 @@ def is_server_respond_with_200(url):
     ):
         return False
 
-    if response.status_code == 200:
+    if response.ok:
         return True
     else:
         return False
@@ -42,7 +42,9 @@ def get_domain_expiration_date(domain_name):
     try:
         response = whois.whois(domain_name)
         expiration_date = response['expiration_date']
-    except:
+    except (
+            OSError
+    ):
         return None
     if type(expiration_date) is list:
         return expiration_date[0]
